@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.oracle.mapper.TUserMapper">
+ 	<insert id="insertTUser" parameterType="com.oracle.po.TUser" >
+ 	insert into tuser (customer_id,account_id,mobile_number,roaming_status,com_level)values(#{customer_id},#{account_id},#{mobile_number},#{roaming_status},#{com_level})
+ 	</insert>
+ </mapper>

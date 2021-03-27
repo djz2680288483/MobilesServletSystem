@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.oracle.mapper.TChargeMapper">
+ 	<select id="selectTchargeByCode" parameterType="com.oracle.po.TCharge" resultType="com.oracle.po.TCharge">
+ 		select * from tcharge where charge_code=#{charge_code}
+ 	</select>
+ 	<update id="updateCharge" parameterType="com.oracle.po.TCharge">
+ 		update tcharge set charge=#{charge} where charge_code=#{charge_code}
+ 	</update>
+ 	<select id="selectChargeRule" parameterType="com.oracle.po.TChargeRule" resultType="com.oracle.po.TChargeRule">
+ 		select * from tcharge_rule where func_id=#{func_id}
+ 	</select>
+ 	<delete id="deleteRuleById" parameterType="com.oracle.po.TChargeRule">
+ 		delete from tcharge_rule where func_id=#{func_id}
+ 	</delete>
+ 	<insert id="insertRule" parameterType="com.oracle.po.TChargeRule">
+ 		insert into tcharge_rule(func_id,charge_code,func_name) values(#{func_id},#{charge_code},#{func_name})
+ 	</insert>
+ </mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.oracle.mapper.TMobileMapper">
+ 	<select id="selectMobileByNumber" parameterType="com.oracle.po.TMobile" resultType="com.oracle.po.TMobile">
+ 		select * from tmobiles where mobile_number=#{mobile_number}
+ 	</select>
+ 	<insert id="insertMobiles" parameterType="com.oracle.po.TMobile" >
+ 		insert into tmobiles(mobile_number,mobile_type,card_number,is_available) values(#{mobile_number},#{mobile_type},#{card_number},#{is_available})
+ 	</insert>
+ 	<update id="updateMobile" parameterType="com.oracle.po.TMobile">
+ 	update tmobiles set is_available=#{is_available} where mobile_number=#{mobile_number}
+ 	
+ 	</update>
+ </mapper>

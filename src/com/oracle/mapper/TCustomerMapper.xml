@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.oracle.mapper.TCustomerMapper">
+ <select id="selectCustomerBytypeAndNumber" parameterType="com.oracle.po.TCustomer" resultType="com.oracle.po.TCustomer">
+ select *from tcustomer where id_type=#{id_type} and id_number=#{id_number}
+ 
+ </select>
+ <select id="insertCustomer" parameterType="com.oracle.po.TCustomer" >
+ insert into tcustomer (id_type,id_number,customer_name,customer_birthday,customer_sex,customer_address)values(#{id_type},#{id_number},#{customer_name},#{customer_birthday},#{customer_sex},#{customer_address})
+ 
+ </select>
+ 
+ 
+ </mapper>
