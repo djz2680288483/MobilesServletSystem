@@ -4,10 +4,16 @@ import java.util.List;
 
 import com.oracle.po.TOperator;
 
+/**
+ * @author 默尘
+ */
 public interface TOperatorMapper {
 
-	public abstract TOperator selectOperatorById(TOperator operator);
-	public abstract void insertOperator(TOperator operator);
-	public abstract List<TOperator> selectAll();
-	public abstract void updateOperatorById(TOperator operator);
+    TOperator selectOperatorById(TOperator operator);
+
+    void insertOperator(TOperator operator);
+
+    List<TOperator> selectAll();
+
+    void updateOperatorById(TOperator operator);
 }

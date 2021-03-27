@@ -2,6 +2,9 @@ package com.oracle.mapper;
 
 import com.oracle.po.TUser;
 
+/**
+ * @author 默尘
+ */
 public interface TUserMapper {
-  public abstract void insertTUser(TUser t);
+    void insertTUser(TUser t);
 }

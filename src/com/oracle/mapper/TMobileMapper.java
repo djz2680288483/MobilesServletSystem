@@ -2,9 +2,14 @@ package com.oracle.mapper;
 
 import com.oracle.po.TMobile;
 
+/**
+ * @author 默尘
+ */
 public interface TMobileMapper {
 
-	public abstract TMobile selectMobileByNumber(TMobile mobile);
-	public abstract void insertMobiles(TMobile mobile);
-	public abstract void updateMobile(TMobile t);
+    TMobile selectMobileByNumber(TMobile mobile);
+
+    void insertMobiles(TMobile mobile);
+
+    void updateMobile(TMobile t);
 }

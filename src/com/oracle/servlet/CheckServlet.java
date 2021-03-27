@@ -32,6 +32,7 @@ public class CheckServlet extends HttpServlet {
 		 * @throws ServletException if an error occurred
 		 * @throws IOException if an error occurred
 		 */
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doPost(request, response);
@@ -47,6 +48,7 @@ public class CheckServlet extends HttpServlet {
 		 * @throws ServletException if an error occurred
 		 * @throws IOException if an error occurred
 		 */
+	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		//获取请求参数

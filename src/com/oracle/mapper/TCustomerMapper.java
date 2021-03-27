@@ -2,7 +2,11 @@ package com.oracle.mapper;
 
 import com.oracle.po.TCustomer;
 
+/**
+ * @author 默尘
+ */
 public interface TCustomerMapper {
-	public abstract TCustomer selectCustomerBytypeAndNumber(TCustomer t);
-	public abstract void insertCustomer(TCustomer t);
+    TCustomer selectCustomerBytypeAndNumber(TCustomer t);
+
+    void insertCustomer(TCustomer t);
 }

@@ -33,7 +33,7 @@ public class LoginFilter implements Filter{
 		HttpSession session = req.getSession();
 		TOperator operator = (TOperator)session.getAttribute("operator");
 		if(operator==null){
-			req.setAttribute("erro", "请登录");
+			req.setAttribute("error", "请登录");
 			req.getRequestDispatcher("index.jsp").forward(req, res);
 		}else{
 			chain.doFilter(req, res);
